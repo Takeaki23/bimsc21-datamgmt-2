@@ -17,7 +17,7 @@ function init() {
     // create a scene and a camera
     scene = new THREE.Scene()
     scene.background = new THREE.Color(1,1,1)
-    camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 )
+    camera = new THREE.PerspectiveCamera( 90, window.innerWidth / window.innerHeight, 0.1, 1000 )
     camera.position.y = - 100
 
     // create the renderer and add it to the html
@@ -28,7 +28,7 @@ function init() {
     const controls = new OrbitControls( camera, renderer.domElement )
 
     const directionalLight = new THREE.DirectionalLight( 0xffffff )
-    directionalLight.position.set( 0, 0, 2 )
+    directionalLight.position.set( 2, 2, 2 )
     directionalLight.castShadow = true
     directionalLight.intensity = 2
     scene.add( directionalLight )
@@ -38,7 +38,7 @@ function init() {
     const loader = new Rhino3dmLoader()
     loader.setLibraryPath( 'https://cdn.jsdelivr.net/npm/rhino3dm@0.13.0/' )
 
-    loader.load( 'sphere.3dm', function ( object ) {
+    loader.load( 'brief2.3dm', function ( object ) {
 
         document.getElementById('loader').remove()
         scene.add( object )
