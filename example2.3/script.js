@@ -50,7 +50,7 @@ function init () {
     material.aoMmap       = tl.load('streaked-metal1_ao.png')
     material.normalMap    = tl.load('streaked-metal1_normal.png')
     material.metalnessMap = tl.load('streaked-metal1_metallic.png')
-    material.metalness = 0.2
+    material.metalness = 0.7
     material.roughness = 0.0
 
     // or create a material
